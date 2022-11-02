@@ -100,11 +100,18 @@ nav {
 
 .icon-contacts {
   margin-right: 10px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .headermenu-item {
+  display: block;
   text-decoration: none;
+  height: 80px;
+  padding-top: 32px;
   color: var(--brand-text-color);
+  position: relative;
+  bottom: 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .headermenu-item:visited {
   text-decoration: none;
@@ -113,6 +120,19 @@ nav {
 .headermenu-item:hover,
 .headermenu-item:focus {
   color: var(--active-color);
+}
+
+.headermenu-item:hover:after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+  margin-bottom: 0;
+  padding: 0;
 }
 .header-contacts {
   display: flex;
@@ -123,6 +143,7 @@ nav {
   letter-spacing: 0.02em;
   color: var(--text-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contacts:visited {
   color: var(--text-color);
@@ -241,6 +262,24 @@ nav {
   align-items: center;
   gap: 30px;
 }
+.whatwedo-element {
+  position: relative;
+}
+.whatwedo-description {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 70px;
+  top: 224px;
+  bottom: 0;
+  font-size: 14px;
+  line-height: 1.026rem;
+  font-weight: 700;
+  color: var(--brand-color);
+  background-color: rgba(47, 48, 58, 0.8);
+  text-align: center;
+  padding-top: 27px;
+}
 .ourteam {
   background: var(--subsection-background-color);
   height: 708px;
@@ -298,6 +337,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socialmedia-element:hover,
@@ -324,6 +364,8 @@ nav {
   align-items: center;
   justify-content: center;
   fill: var(--icon-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ourclients-list-item:hover {
   fill: var(--active-color);
@@ -352,6 +394,9 @@ nav {
   border-radius: 4px;
   padding: 6px 22px;
   margin-bottom: 50px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mainportfolio-button:hover,
 .mainportfolio-button:focus {
@@ -392,6 +437,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-card:hover,
 .portfolio-card:focus {
@@ -443,6 +489,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-description {
   font-size: 14px;
@@ -497,6 +545,7 @@ nav {
   margin: 0;
   margin-bottom: 9px;
   padding: 0;
+  transition: color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts-phone {
   font-size: 14px;
@@ -506,6 +555,7 @@ nav {
   text-decoration: none;
   margin: 0;
   padding: 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contacts-mail:hover,
 .footer-contacts-mail:focus {
