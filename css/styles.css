@@ -170,6 +170,7 @@ nav {
   background-repeat: no-repeat;
   background-position: 50% 36.67%;
   height: 600px;
+  max-width: 1600px;
   display: flex;
   justify-content: center;
   align-items: center;
