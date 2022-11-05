@@ -48,11 +48,11 @@
         </div>
       </header>
     </div>
-    <!-- takie samo dla obywdu stron -->
+    <!-- same for both pages -->
     <main>
       <div class="main-div">
         <h1 class="main-title">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-        <button type="button" class="maindiv-button">Zamów usługę</button>
+        <button type="button" class="maindiv-button" data-modal-open>Zamów usługę</button>
       </div>
       <div class="container">
         <div class="section">
@@ -375,5 +375,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button type="button" class="close-button" data-modal-close>X</button>
+    </div>
+  </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
