@@ -22,7 +22,7 @@ body {
   background-color: var(--brand-color);
   color: var(--brand-text-color);
   font-size: 14px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.03em;
 }
 ul,
 li,
@@ -34,17 +34,23 @@ p {
   padding: 0;
   margin: 0;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
 .container {
   width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
 }
-
+header {
+  border-bottom: 1px solid var(--border-color);
+}
 .header-part {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid var(--border-color);
 }
 
 .header-logo {
@@ -59,9 +65,7 @@ p {
 .dark-text {
   color: var(--logo-color);
 }
-nav {
-  width: 254px;
-}
+
 .headermenu {
   display: flex;
   padding: 0;
@@ -79,12 +83,12 @@ nav {
   gap: 30px;
   margin-left: auto;
 }
-.header-contacts-bar:hover {
-  stroke: var(--active-color);
-  color: var(--active-color);
-}
 
-.icon-contacts {
+.icon-contacts-mail {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.icon-contacts-phone {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -128,7 +132,7 @@ nav {
   background-color: #2196f3;
   border-radius: 2px;
 }
-.header-contacts {
+.header-contacts-mail {
   display: flex;
   align-items: center;
   font-weight: 500;
@@ -139,13 +143,33 @@ nav {
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-contacts:visited {
+.header-contacts-phone {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.026rem;
+  letter-spacing: 0.02em;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.header-contacts-mail:visited {
   color: var(--text-color);
   text-decoration: none;
   fill: var(--text-color);
 }
-.header-contacts:hover,
-.header-contacts:focus {
+.header-contacts-phone:visited {
+  color: var(--text-color);
+  text-decoration: none;
+  fill: var(--text-color);
+}
+.header-contacts-mail:hover,
+.header-contacts-mail:focus {
+  color: var(--active-color);
+}
+.header-contacts-phone:hover,
+.header-contacts-phone:focus {
   color: var(--active-color);
 }
 /* end of header */
@@ -259,7 +283,7 @@ nav {
   display: flex;
   width: 100%;
   height: 70px;
-  bottom: 3px;
+  bottom: 0;
   line-height: 1.14;
   letter-spacing: 0.03em;
   font-weight: 700;
@@ -589,6 +613,10 @@ nav {
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.1);
+  /* opacity: 1;
+  visibility: visible; */
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .is-hidden {
   opacity: 0;
@@ -599,9 +627,10 @@ nav {
   transform: translateY(100%) translateX(-100%) rotate(180deg);
 }
 .modal {
-  position: relative;
-  margin: auto;
-  margin-top: 10%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 528px;
   height: 581px;
   background-color: var(--brand-color);
